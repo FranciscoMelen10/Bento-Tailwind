@@ -2,7 +2,7 @@
 
 Práctica de Bento con Tailwind
 
-- <a href="https://dev-challenges-franciscomelen10.vercel.app/MinimalBlog">Link de la página</a>
+- <a href="https://bento-tailwind.vercel.app/">Link de la página</a>
 
 
 ## Tecnologías
