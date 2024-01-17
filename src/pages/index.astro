@@ -1,0 +1,53 @@
+---
+import Layout from "../Layout/layout.astro";
+import Header from "../Components/header.astro";
+import Bento from "../Components/bento.astro";
+import Footer from "../Components/footer.astro";
+---
+
+<Layout name="Prueba de Bento">
+  <main
+    class="flex items-center justify-start flex-col bg-slate-900 h-full w-screen pt-[30px]"
+  >
+    <Header />
+    <div
+      class="h-auto flex items-center justify-center max-w-[1500px] px-5 max-md:flex-col"
+    >
+      <picture class="size-auto">
+        <img src="/Francisco.svg" alt="Foto de Francisco" class="rounded" />
+      </picture>
+      <section
+        class="text-white flex flex-col justify-between w-1/2 h-full max-md:size-auto max-md:py-6 max-md:text-center gap-2"
+      >
+        <aside>
+          <h1
+            class="font-black text-[45px] max-lg:text-[35px] uppercase tracking-tight leading-none"
+          >
+            Francisco Melendez
+          </h1>
+          <h5
+            class="text-[25px] max-lg:text-[25px] font-black uppercase text-yellow-400"
+          >
+            football coach
+          </h5>
+        </aside>
+        <p class="text-[18px] text-pretty max-md:text-[15px]">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus
+          rem voluptates laborum, dolores quod nihil veritatis blanditiis
+          aliquam, ad cum reiciendis debitis esse amet illum nesciunt,
+          voluptatem iste minima tenetur!
+        </p>
+      </section>
+    </div>
+    <div class="size-full flex items-center justify-center pb-5">
+      <Bento />
+    </div>
+    <Footer></Footer>
+  </main>
+</Layout>
+
+<style>
+  section {
+    font-family: "Poppins", sans-serif;
+  }
+</style>

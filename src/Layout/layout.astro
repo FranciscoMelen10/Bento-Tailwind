@@ -1,0 +1,48 @@
+---
+interface Props {
+  name: string;
+}
+
+const { name } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/ManaguaLogo.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Sora&display=swap"
+      rel="stylesheet"
+    />
+    <title>{name}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style>
+  body {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+body:hover {
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar {
+  width: 15px;
+  border-radius: 10px;
+}
+
+
+body::-webkit-scrollbar-thumb {
+  background-color: #0075f3ab;
+  border-radius: 12px;
+}
+</style>

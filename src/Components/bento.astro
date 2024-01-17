@@ -1,0 +1,80 @@
+---
+import BentoItem from "./bentoItem.astro";
+
+const ItemSm = {
+  class: "col-span-4 max-lg:col-span-6 max-sm:bg-center",
+  "alin-txt": "text-left",
+};
+const ItemLg = {
+  class: "col-span-6 bg-center",
+  "alin-txt": "max-lg:text-left text-right",
+};
+
+const DATA = [
+  {
+    title: "ASISTENTE SUB-20",
+    img: "/2.jpg",
+    class: ItemSm.class,
+    text: ItemSm["alin-txt"],
+  },
+  {
+    title: "CAMPEÓN SUB 20",
+    img: "/1.jpg",
+    class: ItemLg.class,
+    text: ItemLg["alin-txt"],
+  },
+  {
+    title: "EQUIPO MÁS DEFENSIVO",
+    img: "/3.jpg",
+    class: ItemLg.class,
+    text: ItemLg["alin-txt"],
+  },
+  {
+    title: "EXPERIENCIA FUTBOLISTA",
+    img: "/4.jpg",
+    class: ItemSm.class,
+    text: ItemSm["alin-txt"],
+  },
+  {
+    title: "EQUIPO MÁS OFENSIVO",
+    img: "/6.jpg",
+    class: ItemSm.class,
+    text: ItemSm["alin-txt"],
+  },
+  {
+    title: "CAMPEÓN DE APERTURA",
+    img: "/5.jpg",
+    class: ItemLg.class,
+    text: ItemLg["alin-txt"],
+  },
+];
+---
+
+<section
+  class="grid grid-cols-10 auto-rows-[30rem] w-full gap-3 px-6 text-white max-w-[1300px] max-lg:grid-cols-1 max-lg:auto-rows-[30rem] max-lg:gap-5"
+>
+  {
+    DATA.map((info) => {
+      return (
+        <BentoItem class={info.class} img={info.img}>
+          <aside
+            class={`${info.text} p-4 bg-gradient-to-b from-transparent to-black absolute bottom-0 right-0`}
+          >
+            <h1 class="font-black text-[30px] uppercase">{info.title}</h1>
+            <p class="text-[20px]">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Doloribus earum tempore maxime aliquid, voluptas minima natus
+              repudiandae! Nisi provident quasi.
+            </p>
+          </aside>
+        </BentoItem>
+      );
+    })
+  }
+</section>
+
+<style>
+  aside {
+    font-family: "Poppins", sans-serif;
+  }
+</style>
